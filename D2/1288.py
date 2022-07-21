@@ -23,6 +23,29 @@ for i in range(T): #이 부분은 문제가 원하는 출력을 하기 위해서
     print(f"#{i+1} {result[i]}")
 
 
+
+# 다른 풀이
+
+T = int(input())
+for test_case in range(1, T + 1):
+    #input 가져오기
+    N = int(input())
+    N1 = N
+    #Set에 계속 추가
+    numbers = set()
+    #while 반복 => Set 길이가 10이 될 때까지
+    while len(numbers) < 10:
+        #for 반복 : 숫자를 문자로
+        for n in str(N):
+            numbers.add(n)
+        #딱 값이 나오면 끊는다.
+        if len(numbers) == 10:
+            break
+
+        N += N1
+    print(f"#{test_case} {N}")
+
+
         
     
 
